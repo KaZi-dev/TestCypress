@@ -14,4 +14,5 @@ describe('The Home Page', () => {
     cy.get('.paraData').should('have.text', 'Testerino , Wunderland 34')
   })
 
+
 })
