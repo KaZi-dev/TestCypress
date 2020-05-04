@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "ng test": "ng test",
     "build": "ng build",
     "test": "start-server-and-test start http://localhost:4200 cy:run",
     "lint": "ng lint",
