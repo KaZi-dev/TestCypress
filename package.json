@@ -5,14 +5,14 @@
     "ng": "ng",
     "start": "ng serve",
     "ng test": "ng test",
+    "ng test2": "ng test --code-coverage --watch=false",
     "build": "ng build",
     "test": "start-server-and-test start http://localhost:4200 cy:run",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "cy:run": "cypress run",
     "cypress open": "npx cypress open",
-    "cypress run": "npx cypress run",
-    "karma start": "karma start"
+    "cypress run": "npx cypress run"
   },
   "private": true,
   "dependencies": {
@@ -42,6 +42,7 @@
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~5.0.0",
     "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "^2.0.2",
     "karma-coverage-istanbul-reporter": "~2.1.0",
     "karma-jasmine": "~3.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
