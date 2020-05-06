@@ -1,18 +1,16 @@
 <h3>Test</h3>
 <hr>
 <button name="btnFirst" (click)="btnClick()">Click me</button>
-<p [hidden]="hidP">Button were clicked!</p>
+<div [hidden]="hidP">
+<p>Button were clicked!</p>
 <hr>
   <p>Enter name:</p>
-  <input name="nameT" [(ngModel)]="name" type="text">
+  <input name="nameT" [(ngModel)]="userName" type="text">
   <br>
   <p>Enter address:</p>
-  <input name="addressT" [(ngModel)]="address" type="text">
+  <input name="addressT" [(ngModel)]="userAddress" type="text">
 <hr>
-<p class="paraData">{{name}} , {{address}}</p>
-<p>Test the commitment</p>
-<form>
-  <input name="rbtn1" type="radio">
-  <input name="rbtn2" type="radio">
-</form>
-
+<p class="paraData">{{userName}} , {{userAddress}}</p>
+<hr>
+<button name="btnTransmit" (click)="comData()">Commit Data</button>
+</div>

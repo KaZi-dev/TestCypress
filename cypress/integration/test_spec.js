@@ -13,6 +13,12 @@ describe('The Home Page', () => {
   it('should display the data', () => {
     cy.get('.paraData').should('have.text', 'Testerino , Wunderland 34')
   })
-
+  it('should click the data submit button', () => {
+    cy.get('[name="btnTransmit"]').click()
+    cy.get('[name="btnTransmit"]').click()
+    cy.get('[name="btnFirst"]').click()
+    cy.get('[name="btnFirst"]').click()
+    cy.get('[name="btnFirst"]').click()
+  });
 
 })
