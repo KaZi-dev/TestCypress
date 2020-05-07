@@ -1,9 +1,10 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, ComponentFixtureAutoDetect, TestBed} from '@angular/core/testing';
 
 import { TestSideComponent } from './test-side.component';
-import {FormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppComponent} from '../app.component';
 import {TestServiceService} from './test-service.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 describe('TestSideComponent', () => {
@@ -12,8 +13,11 @@ describe('TestSideComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule],
-      declarations: [ TestSideComponent, AppComponent, TestServiceService ]
+      imports: [FormsModule, HttpClientModule, ReactiveFormsModule],
+      declarations: [ TestSideComponent, AppComponent ],
+      providers: [ {
+        ComponentFixtureAutoDetect, useValue: true
+      }, TestServiceService]
     })
     .compileComponents();
   }));
