@@ -1,7 +1,7 @@
 <h3>Test</h3>
 <hr>
 <button name="btnFirst" (click)="btnClick()">Click me</button>
-<div [hidden]="hidP">
+<div id="hidData" [hidden]="hidP">
 <p>Button were clicked!</p>
 <hr>
   <p>Enter name:</p>
@@ -10,7 +10,7 @@
   <p>Enter address:</p>
   <input name="addressT" [(ngModel)]="userAddress" type="text">
 <hr>
-<p class="paraData">{{userName}} , {{userAddress}}</p>
+<p class="paraData" id="showData">{{userName}} , {{userAddress}}</p>
 <hr>
 <button name="btnTransmit" (click)="comData()">Commit Data</button>
 </div>

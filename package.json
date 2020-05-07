@@ -9,10 +9,13 @@
     "build": "ng build",
     "test": "start-server-and-test start http://localhost:4200 cy:run",
     "lint": "ng lint",
-    "e2e": "ng e2e",
+    "e2e": "ng e2e --port 4300",
+    "inst protractor": "npm i -g protractor",
     "cy:run": "cypress run",
     "cypress open": "npx cypress open",
-    "cypress run": "npx cypress run"
+    "cypress run": "npx cypress run",
+    "webdriver update": "webdriver-manager update",
+    "webdriver start": "webdriver-manager start"
   },
   "private": true,
   "dependencies": {
