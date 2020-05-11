@@ -32,6 +32,7 @@ describe('workspace-project App', () => {
   it('should show the entered Data', () => {
     enterData(name, address);
     const data = element(by.id('showData'));
+    browser.wait(data.isEnabled());
     expect(data.getText()).toContain(name, address);
   });
   it('should click the first button to begin', () => {
