@@ -16,7 +16,7 @@ describe('TestSideComponent', () => {
       imports: [FormsModule, HttpClientModule, ReactiveFormsModule],
       declarations: [ TestSideComponent, AppComponent ],
       providers: [ {
-        ComponentFixtureAutoDetect, useValue: true
+        provide: ComponentFixtureAutoDetect, useValue: true
       }, TestServiceService]
     })
     .compileComponents();

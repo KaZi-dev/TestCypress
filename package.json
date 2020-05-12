@@ -16,7 +16,9 @@
     "cypress run": "npx cypress run",
     "webdriver update": "webdriver-manager update",
     "webdriver start": "webdriver-manager start",
-    "jest test": "jest"
+    "jest test": "jest",
+    "jest test:watch": "jest --watch",
+    "jest test:ci": "jest --runInBand"
   },
   "private": true,
   "dependencies": {
@@ -34,18 +36,21 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
+    "@angular-builders/jest": "^9.0.1",
     "@angular-devkit/build-angular": "~0.901.3",
     "@angular/cli": "~9.1.3",
     "@angular/compiler-cli": "~9.1.3",
     "@angular/language-service": "~9.1.3",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/jest": "^25.2.1",
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
+    "glob": "^7.1.6",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "jest": "^26.0.1",
-    "jest-preset-angular": "^8.1.3",
+    "jest-preset-angular": "^8.2.0",
     "karma": "~5.0.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "^2.0.2",
@@ -61,7 +66,7 @@
   },
   "jest": {
     "preset": "jest-preset-angular",
-    "setupTestFrameworkScriptFile": "<rootDir>/setupJest.ts"
+    "setupFilesAfterEnv": ["./setupJest.ts"],
+    "testPathIgnorePatterns": ["src\\test.ts", ".//node_modules/@types/jasmine", "./dist/", "./src/test.ts"]
   }
 }
-

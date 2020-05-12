@@ -1,14 +1,18 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
+import {TestSideComponent} from './test-side/test-side.component';
+import {HttpClientModule} from '@angular/common/http';;
+import {TestServiceService} from './test-side/test-service.service';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [FormsModule],
+      imports: [FormsModule, HttpClientModule],
       declarations: [
-        AppComponent
+        AppComponent, TestSideComponent
       ],
+      providers: [TestServiceService]
     }).compileComponents();
   }));
 

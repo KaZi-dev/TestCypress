@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import {HttpClientModule} from '@angular/common/http';
 import { TestServiceService } from './test-service.service';
-import { HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
+import { HttpClientTestingModule} from '@angular/common/http/testing';
 
 describe('TestServiceService', () => {
   let service: TestServiceService;
