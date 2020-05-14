@@ -14,6 +14,7 @@
     "cy:run": "cypress run",
     "cypress open": "npx cypress open",
     "cypress run": "npx cypress run",
+    "cypress:rec": "cypress run --record --key 822816ba-06d5-4279-b388-cd64127482a8",
     "webdriver update": "webdriver-manager update",
     "webdriver start": "webdriver-manager start",
     "jest test": "jest",
