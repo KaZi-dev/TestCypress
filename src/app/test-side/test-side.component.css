@@ -1,0 +1,9 @@
+button {
+  cursor: pointer;
+  background-color: dimgrey;
+  color: black;
+
+}
+button:disabled {
+  cursor: not-allowed !important;
+}

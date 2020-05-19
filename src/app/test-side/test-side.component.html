@@ -1,16 +1,20 @@
 <h3>Test</h3>
 <hr>
-<button name="btnFirst" (click)="btnClick()">Click me</button>
+<button class="btn btn-primary" name="btnFirst" [hidden]="btF" (click)="btnClick()">Click me</button>
 <div id="hidData" [hidden]="hidP">
 <p>Button were clicked!</p>
 <hr>
+  <form #myForm="ngForm" name="myForm">
   <p>Enter name:</p>
-  <input name="nameT" [(ngModel)]="userName" type="text">
+  <input required minlength="3" name="nameT" [(ngModel)]="userName" type="text">
   <br>
   <p>Enter address:</p>
-  <input name="addressT" [(ngModel)]="userAddress" type="text">
+  <input required minlength="3" name="addressT" [(ngModel)]="userAddress" type="text">
+
+    <hr>
+<p class="paraData" id="showData">Name: {{userName}}  Address: {{userAddress}}</p>
 <hr>
-<p class="paraData" id="showData">{{userName}} , {{userAddress}}</p>
-<hr>
-<button name="btnTransmit" (click)="comData()">Commit Data</button>
+    <button type="button" [disabled]="!myForm.form.valid" [hidden]="btnCom" name="btnTransmit" class="btn btn-primary" (click)="comData()">Commit</button>
+    <p [hidden]="parCom" style="color: #006600">Successfully committed!</p>
+  </form>
 </div>
