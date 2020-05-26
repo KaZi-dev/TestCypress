@@ -17,7 +17,7 @@
     "cypress:rec": "cypress run --record --key 822816ba-06d5-4279-b388-cd64127482a8",
     "webdriver update": "webdriver-manager update",
     "webdriver start": "webdriver-manager start",
-    "jest test": "jest",
+    "jest test": "jest --coverage",
     "jest test:watch": "jest --watch",
     "jest test:ci": "jest --runInBand"
   },
