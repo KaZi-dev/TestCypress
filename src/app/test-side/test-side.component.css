@@ -7,3 +7,6 @@ button {
 button:disabled {
   cursor: not-allowed !important;
 }
+label {
+  padding: 1rem;
+}

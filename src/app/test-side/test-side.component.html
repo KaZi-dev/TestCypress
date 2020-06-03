@@ -1,7 +1,9 @@
 <h3>Test</h3>
 <hr>
+<div [hidden]="btnFirstHid">
 <button class="btn btn-primary" name="btnFirst" [hidden]="btF" (click)="btnClick()">Click me</button>
-<div id="hidData" [hidden]="hidP">
+</div>
+  <div id="hidData" [hidden]="hidP">
 <p>Button were clicked!</p>
 <hr>
   <form #myForm="ngForm" name="myForm">
@@ -10,7 +12,11 @@
   <br>
   <p>Enter address:</p>
   <input required minlength="3" name="addressT" [(ngModel)]="userAddress" type="text">
-
+   <br>
+    <input required [(ngModel)]="Checked" type="radio" value="male" name="genderCheck">
+    <label>Male</label>
+    <input required [(ngModel)]="Checked" type="radio" value="female" name="genderCheck">
+    <label>Female</label>
     <hr>
 <p class="paraData" id="showData">Name: {{userName}}  Address: {{userAddress}}</p>
 <hr>

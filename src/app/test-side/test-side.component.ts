@@ -14,6 +14,9 @@ export class TestSideComponent implements OnInit {
   btF = false;
   btnCom = false;
   parCom = true;
+  btnFirstHid = false;
+  Checked = '';
+  @Input() gender: string;
 
   constructor(private testServiceService: TestServiceService) { }
 
@@ -23,15 +26,23 @@ export class TestSideComponent implements OnInit {
 
   btnClick() {
     this.hidP = false;
-    this.btF = true;
     this.testServiceService.getProcessIDafterStart();
+    this.btnFirstHid = true;
   }
 
-  comData() {
-    if (this.userName.length < 3 || this.userAddress.length < 3){
+  checkGender() {
+    if ( this.Checked === 'male') {
+      this.gender = 'Male';
     }
+    else if (this.Checked === 'female') {
+      this.gender = 'Female';
+    }
+  }
+  comData() {
+    this.checkGender();
     this.testServiceService.setName(this.userName);
     this.testServiceService.setAddress(this.userAddress);
+    this.testServiceService.setGender(this.gender);
     this.testServiceService.parse();
     this.testServiceService.complUserTask();
     this.btnCom = true;
