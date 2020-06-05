@@ -16,7 +16,9 @@ describe('The Home Page', () => {
     cy.get('[name="nameT"]').type('Testerino');
     cy.get('[name="addressT"]').type('Wunderland 34');
   });
-
+  it('should select a gender', () => {
+    cy.get('[value="male"]').click()
+  });
   it('should display the data', () => {
     cy.get('.paraData').should('contain.text', 'Testerino')
     cy.get('.paraData').should('contain.text', 'Wunderland 34')
