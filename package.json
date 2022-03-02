@@ -55,7 +55,7 @@
     "jest": "^26.0.1",
     "jest-bamboo-reporter": "^1.2.1",
     "jest-preset-angular": "^8.2.0",
-    "karma": "~5.0.0",
+    "karma": "~6.3.16",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "^2.0.2",
     "karma-coverage-istanbul-reporter": "~2.1.0",
